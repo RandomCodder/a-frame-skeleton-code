@@ -21,6 +21,29 @@ function moveCar() {
 }
 moveCar()
 
+const car2 = document.getElementById("car2")
+var c2x = 0
+var c2y = 0
+var c2z = -23
+
+var c2speed = 0.10
+var c2original = c2z
+var c2limit = 16
+
+function moveCar2() {
+    if (c2z < (c2original + c2limit)) {
+        c2z += c2speed
+    }
+    else {
+        c2z = c2original
+    }
+    car2.setAttribute('position', `${c2x} ${c2y} ${c2z}`)
+    requestAnimationFrame(moveCar2)
+
+
+}
+moveCar2()
+
 
 
 const rocket = document.getElementById("rocket")
