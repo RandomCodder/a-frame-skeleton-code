@@ -45,6 +45,54 @@ function moveCar2() {
 moveCar2()
 
 
+const car3 = document.getElementById("car3")
+var c3x = 0
+var c3y = 0
+var c3z = -25
+
+var c3speed = 0.02
+var c3original = c3x
+var c3limit = 23
+
+function moveCar3() {
+    if (c3x < (c3original + c3limit)) {
+        c3x += c3speed
+    }
+    else {
+        c3x = c3original
+    }
+    car3.setAttribute('position', `${c3x} ${c3y} ${c3z}`)
+    requestAnimationFrame(moveCar3)
+
+
+}
+moveCar3()
+
+
+const car4 = document.getElementById("car4")
+var c4x = 0
+var c4y = 0
+var c4z = -25
+
+var c4speed = 0.01
+var c4original = c4x
+var c4limit = 20
+
+function moveCar4() {
+    if (c4x < (c4original + c4limit)) {
+        c4x += c4speed
+    }
+    else {
+        c4x = c4original
+    }
+    car4.setAttribute('position', `${c4x} ${c4y} ${c4z}`)
+    requestAnimationFrame(moveCar4)
+
+
+}
+moveCar4()
+
+
 
 const rocket = document.getElementById("rocket")
 var rx = 0
