@@ -69,6 +69,54 @@ function moveCar3() {
 moveCar3()
 
 
+const car5 = document.getElementById("car5")
+var c5x = -35
+var c5y = 0
+var c5z = -75
+
+var c5speed = 0.25
+var c5original = c5x
+var c5limit = 40
+
+function moveCar5() {
+    if (c5x < (c5original + c5limit)) {
+        c5x += c5speed
+    }
+    else {
+        c5x = c5original
+    }
+    car5.setAttribute('position', `${c5x} ${c5y} ${c5z}`)
+    requestAnimationFrame(moveCar5)
+
+
+}
+moveCar5()
+
+
+const car6 = document.getElementById("car6")
+var c6x = 0
+var c6y = 0
+var c6z = -32
+
+var c6speed = 0.05
+var c6original = c6z
+var c6limit = 15
+
+function moveCar6() {
+    if (c6z < (c6original + c6limit)) {
+        c6z += c6speed
+    }
+    else {
+        c6z = c6original
+    }
+    car6.setAttribute('position', `${c6x} ${c6y} ${c6z}`)
+    requestAnimationFrame(moveCar6)
+
+
+}
+moveCar6()
+
+
 const car4 = document.getElementById("car4")
 var c4x = 0
 var c4y = 0
@@ -91,7 +139,6 @@ function moveCar4() {
 
 }
 moveCar4()
-
 
 
 const rocket = document.getElementById("rocket")
