@@ -116,6 +116,29 @@ function moveCar6() {
 }
 moveCar6()
 
+const car7 = document.getElementById("car7")
+var c7x = 5
+var c7y = 0
+var c7z = -25
+
+var c7speed = -0.05
+var c7original = c7x
+var c7limit = 15
+
+function moveCar7() {
+    if (c7x > (c7original - c7limit)) {
+        c7x += c7speed
+    }
+    else {
+        c7x = c7original
+    }
+    car7.setAttribute('position', `${c7x} ${c7y} ${c7z}`)
+    requestAnimationFrame(moveCar7)
+
+
+}
+moveCar7()
+
 
 const car4 = document.getElementById("car4")
 var c4x = 0
